@@ -32,8 +32,8 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(safe-local-variable-values (quote ((eval setenv "GOPATH" "/home/pib/marketvibe/scraper/.goat/deps:/home/pib/projects/go"))))
-)
+ '(help-at-pt-display-when-idle (quote (flymake-overlay)) nil (help-at-pt))
+ '(safe-local-variable-values (quote ((eval setenv "GOPATH" "/home/pib/marketvibe/scraper/.goat/deps:/home/pib/projects/go")))))
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.

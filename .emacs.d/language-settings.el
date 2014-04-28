@@ -2,6 +2,7 @@
 (require 'help-at-pt)
 (require 'mmm-auto)
 (require 'auto-complete-config)
+(load "flymake/flymake.el")
 
 ;; Autocomplete stuff
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
