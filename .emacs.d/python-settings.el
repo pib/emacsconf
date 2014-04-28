@@ -28,3 +28,5 @@
 
 ;;;; emacs-for-python
 (load "emacs-for-python/epy-init.el")
+(require 'highlight-indentation)
+(add-hook 'python-mode-hook 'highlight-indentation)
