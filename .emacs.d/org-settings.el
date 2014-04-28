@@ -77,7 +77,6 @@
       org-agenda-window-setup 'other-window
       org-clock-in-switch-to-state "STARTED"
       org-deadline-warning-days 7
-      org-deadline-warning-days 7 t
       org-fast-tag-selection-single-key nil
       org-insert-mode-line-in-empty-file t
       org-log-done 'time
@@ -88,8 +87,8 @@
       org-use-fast-todo-selection t
       org-use-tag-inheritance t
       remember-annotation-functions '(org-remember-annotation)
-      remember-handler-functions '(org-remember-handler))
-)
+      remember-handler-functions '(org-remember-handler)
+      )
 
 (defun gtd ()
     (interactive)

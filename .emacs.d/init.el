@@ -2,6 +2,8 @@
 
 (require 'better-defaults) ; start with basic better defaults
 
+(server-start) ; run server so emacsclient can connect
+
 ;; Config files should be organized with the following order as much
 ;; as possible...
 ; 0. dependencies (requires)

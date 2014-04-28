@@ -13,7 +13,7 @@
       glasses-original-separator ""
       glasses-separate-parentheses-p nil
       glasses-separator ""
-      help-at-pt-display-when-idle (quote (flymake-overlay)) nil (help-at-pt)
+      help-at-pt-display-when-idle (quote (flymake-overlay))
       help-at-pt-timer-delay 0.5
 
       ;flymake-log-level 3
@@ -76,7 +76,7 @@
 (require 'love-minor-mode)
 
 ;; Mako
-(load "~/.emacs.d/mmm-mako.el")
+(load "mmm-mako")
 (add-to-list 'auto-mode-alist '("\\.mako\\'" . html-mode))
 (mmm-add-mode-ext-class 'html-mode "\\.mako\\'" 'mako)
 
@@ -88,7 +88,7 @@
 (require 'mustache-mode)
 
 ;; Python has enough stuff it needs its own file
-(load "python-settings")
+(load "~/.emacs.d/python-settings.el")
 
 ;; Ruby
 (autoload 'ruby-mode "ruby-mode" "Major mode for editing ruby scripts." t)
