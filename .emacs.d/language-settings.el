@@ -1,4 +1,5 @@
 ;; Shared Language settings
+(require 'electric)
 (require 'help-at-pt)
 (require 'mmm-auto)
 (require 'auto-complete-config)
@@ -51,6 +52,10 @@
 (require 'go-flymake)
 
 ;; Javascript
+(eval-after-load 'js2-mode
+  '(progn
+     (require 'js2-imenu-extras)
+     (js2-imenu-extras-setup)))
 (autoload 'js2-mode "js2-mode.el" "Major mode for editing JS files" t)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
