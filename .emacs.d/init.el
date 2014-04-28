@@ -1,4 +1,4 @@
-(setq load-path (cons  "~/.emacs.d/elisp" load-path))
+(add-to-list 'load-path  "~/.emacs.d/elisp/")
 
 (require 'better-defaults) ; start with basic better defaults
 
