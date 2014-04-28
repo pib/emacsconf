@@ -1,0 +1,11 @@
+C-c C-q      Set tags for current headline
+C-c C-c      Set tags for headline when cursor is *in* headline
+C-c C-s      Schedule the current headline
+C-c C-a      Enter agenda mode
+C-c C-x C-c  Switch to column view in agenda
+  q          Exit column view
+  S-<left>   Select previous time estimate value
+  S-<right>  Select next time estimate value
+
+C-c C-x C-i  Clock-in to the current item
+C-c C-x C-o  Clock-out from the currently clocked item
