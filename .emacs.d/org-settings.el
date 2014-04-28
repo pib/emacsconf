@@ -18,26 +18,26 @@
       org-mobile-directory (concat org-directory "/stage/")
       org-mobile-inbox-for-pull (concat org-directory "/gtd/gtd.org")
 
-      org-agenda-files '((concat org-directory "/ideas.org")
-                         (concat org-directory "/glidetv.org")
-                         (concat org-directory "/gtd/birthday.org")
-                         (concat org-directory "/gtd/gtd.org"))
+      org-agenda-files `(,(concat org-directory "/ideas.org")
+                         ,(concat org-directory "/glidetv.org")
+                         ,(concat org-directory "/gtd/birthday.org")
+                         ,(concat org-directory "/gtd/gtd.org"))
 
-      org-refile-targets '((nil :maxlevel . 2)
+      org-refile-targets `((nil :maxlevel . 2)
                            (org-agenda-files :maxlevel . 2)
-                           ((concat org-directory "/gtd/notes.org") :maxlevel . 2)
-                           ((concat org-directory "/gtd/someday.org") :maxlevel . 2))
+                           (,(concat org-directory "/gtd/notes.org") :maxlevel . 2)
+                           (,(concat org-directory "/gtd/someday.org") :maxlevel . 2))
 
-      org-remember-templates '(("Todo" ?t "* TODO %^{Brief Description} %^g\n%?\nAdded: %U"
-                                (concat org-directory "/gtd/gtd.org") "Tasks")
+      org-remember-templates `(("Todo" ?t "* TODO %^{Brief Description} %^g\n%?\nAdded: %U"
+                                ,(concat org-directory "/gtd/gtd.org") "Tasks")
                                ("Journal" ?j "\n* %^{topic} %T \n%i%?\n"
-                                (concat org-directory "/journal.org"))
+                                ,(concat org-directory "/journal.org"))
                                ("Notes" ?n "\n* %^{topic} %T \n%i%?\n"
-                                (concat org-directory "/gtd/notes.org"))
+                                ,(concat org-directory "/gtd/notes.org"))
                                ("Contact" ?c "\n* %^{Name} :CONTACT:\n%[~/Dropbox/org/contemp.txt]\n"
-                                (concat org-directory "/gtd/notes.org"))
+                                ,(concat org-directory "/gtd/notes.org"))
                                ("Someday" ?s "** %^{Someday Heading} %U\n%?\n"
-                                (concat org-directory "/gtd/someday.org")))
+                                ,(concat org-directory "/gtd/someday.org")))
 
       org-agenda-custom-commands '(("P" "Projects" ((tags "PROJECT")))
                                    ("H" "Work and Home Lists" ((agenda)
