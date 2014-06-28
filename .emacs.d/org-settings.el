@@ -8,6 +8,7 @@
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (add-hook 'org-agenda-mode-hook 'hl-line-mode)
 (add-hook 'remember-mode-hook 'org-remember-apply-template)
+(add-hook 'org-mode-hook 'textmate-mode)
 
 ;; Configure org-mode
 

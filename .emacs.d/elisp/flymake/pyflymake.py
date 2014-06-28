@@ -328,6 +328,8 @@ def main():
         format='%(levelname)-8s %(message)s')
 
     config = find_config(os.path.realpath(args[0]), options.trigger_type)
+    if config is None:
+        config = find_config(os.getcwd(), options.trigger_type)
     for key, value in DEFAULT_CONFIG.items():
         if not hasattr(config, key):
             setattr(config, key, value)

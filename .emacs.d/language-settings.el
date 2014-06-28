@@ -38,6 +38,12 @@
 ;; C
 (setq c-default-style "k&r"
       c-basic-offset 4)
+(add-hook 'c-mode-hook 'textmate-mode)
+
+;; CSV
+(add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
+(autoload 'csv-mode "csv-mode"
+  "Major mode for editing comma-separated value files." t)
 
 ;; Fantom
 (require 'fan-mode)
@@ -50,6 +56,7 @@
 (require 'go-autocomplete)
 (add-to-list 'load-path "~/projects/go/src/github.com/dougm/goflymake")
 (require 'go-flymake)
+(add-hook 'go-mode-hook 'textmate-mode)
 
 ;; Javascript
 (eval-after-load 'js2-mode
@@ -68,6 +75,8 @@
        (let ((file (file-name-nondirectory buffer-file-name)))
           (concat "rhino /home/pib/jslint.js " file)))))
 
+(add-hook 'js2-mode-hook 'textmate-mode)
+
 (setq js-indent-level 2
       js2-basic-offset 2
       js2-bounce-indent t)
@@ -76,10 +85,14 @@
 (setq inferior-lisp-program "/usr/bin/clisp")
 (require 'slime)
 (slime-setup)
+(add-hook 'lisp-mode-hook 'textmate-mode)
+
 
 ;; Lua
 (setq lua-indent-level 4)
 (require 'love-minor-mode)
+(add-hook 'lua-mode-hook 'textmate-mode)
+
 
 ;; Mako
 (load "mmm-mako")
@@ -92,6 +105,9 @@
 
 ;; Mustache
 (require 'mustache-mode)
+(add-hook 'mustache-mode-hook 'textmate-mode)
+
+
 
 ;; Python has enough stuff it needs its own file
 (load "~/.emacs.d/python-settings.el")
@@ -100,6 +116,8 @@
 (autoload 'ruby-mode "ruby-mode" "Major mode for editing ruby scripts." t)
 (add-to-list 'auto-mode-alist  '(".rb$" . ruby-mode))
 (add-to-list 'auto-mode-alist  '(".rhtml$" . html-mode))
+(add-hook 'ruby-mode-hook 'textmate-mode)
+
 
 ;; Yaml
 (require 'yaml-mode)
